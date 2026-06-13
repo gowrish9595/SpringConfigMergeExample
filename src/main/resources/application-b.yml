@@ -1,0 +1,3 @@
+# Source B — overrides ONLY db.url; says nothing about db.user or db.pool
+db:
+  url: jdbc:b

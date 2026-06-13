@@ -1,0 +1,5 @@
+# Source A — the base configuration with all three db keys
+db:
+  url: jdbc:a
+  user: admin
+  pool: 10
