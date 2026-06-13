@@ -1,0 +1,6 @@
+# Utility override file — NOT a profile, just a plain config file.
+# Loaded via spring.config.additional-location which gives it higher priority
+# than application.yml (the main JAR config).
+# Declares ONLY node.id so every other key from application.yml survives untouched.
+node:
+  id: utility-node
