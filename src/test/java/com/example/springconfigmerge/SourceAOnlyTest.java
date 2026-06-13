@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Baseline: only source A is active (no profile override).
- * All three dotted keys come from application.yml.
+ * All keys come from application.yml — this is what the main JAR sees.
  */
 @SpringBootTest
 class SourceAOnlyTest {
@@ -20,6 +20,15 @@ class SourceAOnlyTest {
 
     @Autowired
     DbProperties db;
+
+    @Autowired
+    NodeProperties node;
+
+    @Test
+    @DisplayName("node.id comes from main JAR config")
+    void nodeId_fromMainJar() {
+        assertThat(env.getProperty("node.id")).isEqualTo("main-node");
+    }
 
     @Test
     @DisplayName("db.url comes from source A")

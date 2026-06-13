@@ -1,0 +1,4 @@
+# Utility profile — overrides ONLY node.id to avoid transaction collisions.
+# Says nothing about db.* so those keys survive untouched from the main JAR.
+node:
+  id: utility-node

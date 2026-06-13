@@ -1,4 +1,7 @@
-# Source A — the base configuration with all three db keys
+# Source A — base configuration (main JAR)
+node:
+  id: main-node
+
 db:
   url: jdbc:a
   user: admin
